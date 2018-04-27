@@ -42,3 +42,16 @@ def timeit(func, validator=lambda x: True, rep=50):
 
 def success_rate(func, validator=lambda x: x, rep=50):
     return timeit(func, validator=validator, rep=rep)
+
+
+def bests_and_worsts(func, number_shown=3, rep=50):
+    records = []
+    for i in range(rep):
+        print('Rep:', i + 1)
+        record = func()
+        if record:
+            records.append(record)
+
+    complexity_list = sorted(records)
+    print('Best: {:.2f}, {:.2f}, {:.2f}'.format(*complexity_list[:number_shown]), end='; ')
+    print('Worst: {:.2f}, {:.2f}, {:.2f}'.format(*complexity_list[-1 * number_shown:]))
