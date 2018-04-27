@@ -1,0 +1,1 @@
+web: gunicorn <<file_name>>:<<app_name>> --log-file=-
