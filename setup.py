@@ -1,7 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='MyUtils',
     version='0.1.0',
-    packages=['MyUtils']
+    packages=find_packages(exclude=['tests']),
+    tests_require=['pytest']
 )
