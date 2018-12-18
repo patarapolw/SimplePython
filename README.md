@@ -13,7 +13,7 @@ An important concept in Python is virtual environment. The tool I am going to us
 
 ```commandline
 which python3
-# /Library/Frameworks/Python.framework/Versions/3.7/bin/python3
+// /Library/Frameworks/Python.framework/Versions/3.7/bin/python3
 unlink /usr/local/bin/python
 ln -s /Library/Frameworks/Python.framework/Versions/3.7/bin/python3 /usr/local/bin/python
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
